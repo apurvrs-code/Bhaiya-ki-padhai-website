@@ -84,9 +84,24 @@ nav a:hover {
 .hero {
   padding: 100px 10% 80px;
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 0.9fr 1.3fr 1fr;
   gap: 60px;
   align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px rgba(108,140,255,0.5),
+              0 0 40px rgba(108,140,255,0.35);
+  animation: floatImage 6s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .hero h1 {
@@ -213,7 +228,15 @@ footer {
   .hero {
     grid-template-columns: 1fr;
     padding-top: 60px;
+    text-align: center;
   }
+  .hero-image img {
+    margin: 0 auto 20px;
+  }
+  .hero h1 {
+    font-size: 2.6rem;
+  }
+}
   .hero h1 {
     font-size: 2.6rem;
   }
@@ -267,6 +290,9 @@ footer {
       <a href="#contact">Contact</a>
     </nav>
   </header>  <section class="hero reveal">
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Bhaiya Ki Padhai Mentor" />
+    </div>
     <div>
       <h1>Smart Coaching for <br> Serious Students</h1>
       <p>
@@ -306,13 +332,23 @@ footer {
       <div class="course">
         <h4>Class 9–10 Foundation</h4>
         <p>Maths and Science with strong basics and problem-solving skills.</p>
-      
+      </div>
+      <div class="course">
+        <h4>Class 11–12 (PCM)</h4>
+        <p>Physics, Chemistry, Maths with board + competitive focus.</p>
+      </div>
+      <div class="course">
+        <h4>Competitive Prep</h4>
+        <p>Focused preparation for JEE-level concepts and practice.</p>
+      </div>
     </div>
   </section>  <footer id="contact">
     <p>📍 Online & Offline Coaching Available</p>
-    <p>📞 Contact: +91-6206253237 | ✉️ pranabpradhana@gmail.com</p>
+    <p>📞 Contact: +91-XXXXXXXXXX | ✉️ bhaiyakipadhai@email.com</p>
     <p style="margin-top:10px; font-size:0.85rem;">© 2026 Bhaiya Ki Padhai. All rights reserved.</p>
-  </footer>    <script>
+  </footer>  <a class="whatsapp" href="https://wa.me/91XXXXXXXXXX" target="_blank">
+    💬 Join on WhatsApp
+  </a>  <script>
     const reveals = document.querySelectorAll('.reveal');
     const revealOnScroll = () => {
       const trigger = window.innerHeight * 0.85;
